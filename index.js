@@ -38,7 +38,7 @@ console.log(
   2. Hangisi bir closure kullanmaktadır? Nasıl tarif edebilirsin? (yarınki derste öğreneceksin :) )
   Skor1 de closure kullanılmıştır. return function skoreGuncelle() den itibaren return skor++ skor1 için closure dır. 
   3. Hangi durumda skor1 tercih edilebilir? Hangi durumda skor2 daha mantıklıdır?
-  Skorun arttırlmasına dışarıdan müdahele edilmesi istenmediğinde skor1 kullanılması daha mantıklıdır.
+  Skorun arttırlmasına dışarıdan müdahele edilmesi istenmediğinde skor1 kullanılması daha mantıklıdır. Globalde skor2 nin değişmesinde sorun olmadığında skor2 kullanılabilir.
 */
 
 // skor1 kodları
@@ -90,7 +90,15 @@ Aşağıdaki macSonucu() fonksiyonununda aşağıdakileri yapınız:
 }
 */
 
-function macSonucu() {}
+function macSonucu(takimSkoru, ceyrek) {
+  let evSahibi = 0;
+  let konukTakim = 0;
+  for (let i = 1; (i = ceyrek); i++) {
+    evSahibi += takimSkoru();
+    konukTakim += takimSkoru();
+  }
+}
+console.log(macSonucu(takimSkoru, 4));
 
 /* Zorlayıcı Görev 4: periyotSkoru()
 Aşağıdaki periyotSkoru() fonksiyonununda aşağıdakileri yapınız:
@@ -105,9 +113,7 @@ Aşağıdaki periyotSkoru() fonksiyonununda aşağıdakileri yapınız:
 }
   */
 
-function periyotSkoru(/*Kodunuzu buraya yazınız*/) {
-  /*Kodunuzu buraya yazınız*/
-}
+function periyotSkoru() {}
 
 /* Zorlayıcı Görev 5: skorTabelasi() 
 Aşağıdaki skorTabelasi() fonksiyonunu kullanarak aşağıdakileri yapınız:
