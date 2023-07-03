@@ -93,10 +93,16 @@ Aşağıdaki macSonucu() fonksiyonununda aşağıdakileri yapınız:
 function macSonucu(takimSkoru, ceyrek) {
   let evSahibi = 0;
   let konukTakim = 0;
-  for (let i = 1; (i = ceyrek); i++) {
-    evSahibi += takimSkoru();
-    konukTakim += takimSkoru();
+
+  for (let i = 1; i <= ceyrek; i++) {
+    const evSahibiDegeri = takimSkoru();
+    const konukTakimDegeri = takimSkoru();
+
+    evSahibi += evSahibiDegeri;
+    konukTakim += konukTakimDegeri;
   }
+
+  return { EvSahibi: evSahibi, KonukTakim: konukTakim };
 }
 console.log(macSonucu(takimSkoru, 4));
 
@@ -113,7 +119,13 @@ Aşağıdaki periyotSkoru() fonksiyonununda aşağıdakileri yapınız:
 }
   */
 
-function periyotSkoru() {}
+function periyotSkoru(takimSkoru) {
+  const periyotEv = takimSkoru();
+  const periyotKonuk = takimSkoru();
+
+  return { EvSahibi: periyotEv, KonukTakim: periyotKonuk };
+}
+console.log(periyotSkoru(takimSkoru));
 
 /* Zorlayıcı Görev 5: skorTabelasi() 
 Aşağıdaki skorTabelasi() fonksiyonunu kullanarak aşağıdakileri yapınız:
